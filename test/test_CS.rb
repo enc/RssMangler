@@ -2,6 +2,7 @@ require 'helper'
 
 class TestCs < Test::Unit::TestCase
   should "probably rename this file and start testing for real" do
-    flunk "hey buddy, you should probably rename this file and start testing for real"
+    fetcher = ContentStream.new()
+
   end
 end

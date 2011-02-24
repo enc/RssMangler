@@ -9,6 +9,7 @@ gem "nokogiri", "~> 1.4.4"
 
 group :development do
   gem "ZenTest", "~> 4.4.0"
+  gem "minitest", "~>2.0.2"
   gem "shoulda", ">= 0"
   gem "bundler", "~> 1.0.0"
   gem "jeweler", "~> 1.5.2"

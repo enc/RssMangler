@@ -11,6 +11,7 @@ class TestCs < MiniTest::Unit::TestCase
     stream = CS.new("http://about.podpiska.de/rss-feed-help")
     assert 8, stream.size
     assert stream[0].title, "Как продлевается подписка"
+    assert stream[0].non_existen, ""
     assert_respond_to stream, :each
   end
 

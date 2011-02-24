@@ -8,8 +8,8 @@ require 'nokogiri'
 class CS
 
   def initialize uri
-    @doc = Nokogiri::HTML(open(uri))
-    @items = @doc.css("item").collect do |element|
+    @doc = Nokogiri::Slop(open(uri))
+    @items = @doc.html.body.rss.channel.item.collect do |element|
       ContentItem.new(element)
     end
 
@@ -34,8 +34,10 @@ class ContentItem
   end
 
   def method_missing method, *arg
-    if item = @content.css(method.to_s)
-      item.text
+    begin
+      @content.send(method).text
+    rescue NoMethodError
+      ""
     end
   end
 end

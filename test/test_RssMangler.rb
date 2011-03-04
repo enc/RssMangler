@@ -3,12 +3,12 @@ require 'minitest/autorun'
 require 'helper'
 require 'open-uri'
 
-require 'CS'
+require 'RssMangler'
 
-class TestCs < MiniTest::Unit::TestCase
+class TestRssMangler < MiniTest::Unit::TestCase
 
   def test_fetch
-    stream = CS.new("http://about.podpiska.de/rss-feed-help")
+    stream = RssMangler.new("http://about.podpiska.de/rss-feed-help")
     assert 8, stream.size
     assert stream[0].title, "Как продлевается подписка"
     assert stream[0].non_existen, ""
@@ -17,7 +17,7 @@ class TestCs < MiniTest::Unit::TestCase
 
   def test_wrong_url
     assert_raises Errno::ENOENT do
-      stream = CS.new("not even an url")
+      stream = RssMangler.new("not even an url")
     end
   end
 end

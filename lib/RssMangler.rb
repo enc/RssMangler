@@ -5,7 +5,7 @@ require 'open-uri'
 require 'nokogiri'
 
 
-class CS
+class RssMangler
 
   def initialize uri
     @doc = Nokogiri::Slop(open(uri))

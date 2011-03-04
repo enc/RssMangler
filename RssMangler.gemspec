@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{RssMangler}
-  s.version = "0.0.2"
+  s.version = "0.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jones"]
@@ -26,9 +26,10 @@ Gem::Specification.new do |s|
     "Rakefile",
     "RssMangler.gemspec",
     "VERSION",
-    "lib/CS.rb",
+    "init.rb",
+    "lib/RssMangler.rb",
     "test/helper.rb",
-    "test/test_CS.rb"
+    "test/test_RssMangler.rb"
   ]
   s.homepage = %q{http://github.com/enc/RssMangler}
   s.licenses = ["MIT"]
@@ -37,7 +38,7 @@ Gem::Specification.new do |s|
   s.summary = %q{Fetches everything form non conform rss stream}
   s.test_files = [
     "test/helper.rb",
-    "test/test_CS.rb"
+    "test/test_RssMangler.rb"
   ]
 
   if s.respond_to? :specification_version then
@@ -51,6 +52,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_runtime_dependency(%q<nokogiri>, ["~> 1.4.4"])
     else
       s.add_dependency(%q<nokogiri>, ["~> 1.4.4"])
       s.add_dependency(%q<ZenTest>, ["~> 4.4.0"])
@@ -59,6 +61,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<nokogiri>, ["~> 1.4.4"])
     end
   else
     s.add_dependency(%q<nokogiri>, ["~> 1.4.4"])
@@ -68,6 +71,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<nokogiri>, ["~> 1.4.4"])
   end
 end
 

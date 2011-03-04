@@ -24,7 +24,7 @@ class RssMangler
   end
 
   def each &block
-    @items &block
+    @items.each &block
   end
 end
 

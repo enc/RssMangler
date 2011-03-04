@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "RssMangler.gemspec",
     "VERSION",
     "lib/CS.rb",
     "test/helper.rb",

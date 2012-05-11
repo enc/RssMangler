@@ -15,6 +15,10 @@ class TestRssMangler < MiniTest::Unit::TestCase
     assert_respond_to stream, :each
   end
 
+  def test_empty
+    assert RssMangler.new("http://about.podpiska.de/rss-feed-promotions/").size, 0
+  end
+
   def test_wrong_url
     assert_raises Errno::ENOENT do
       stream = RssMangler.new("not even an url")

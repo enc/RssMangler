@@ -9,8 +9,13 @@ class RssMangler
 
   def initialize uri
     @doc = Nokogiri::Slop(open(uri))
-    @items = @doc.html.body.rss.channel.item.collect do |element|
-      ContentItem.new(element)
+    channel = @doc.html.body.rss.channel
+    unless channel.xpath("child::item").empty?
+      @items = channel.item.collect do |element|
+        ContentItem.new(element)
+      end
+    else
+      @items = []
     end
 
   end

@@ -2,16 +2,23 @@ GEM
   remote: http://rubygems.org/
   specs:
     ZenTest (4.4.2)
+    coderay (1.0.6)
     git (1.2.5)
     jeweler (1.5.2)
       bundler (~> 1.0.0)
       git (>= 1.2.5)
       rake
+    method_source (0.7.1)
     minitest (2.0.2)
     nokogiri (1.4.4)
+    pry (0.9.8.4)
+      coderay (~> 1.0.5)
+      method_source (~> 0.7.1)
+      slop (>= 2.4.4, < 3)
     rake (0.8.7)
     rcov (0.9.9)
     shoulda (2.11.3)
+    slop (2.4.4)
 
 PLATFORMS
   ruby
@@ -22,5 +29,6 @@ DEPENDENCIES
   jeweler (~> 1.5.2)
   minitest (~> 2.0.2)
   nokogiri (~> 1.4.4)
+  pry
   rcov
   shoulda
